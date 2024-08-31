@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { PageProvider } from "./PageContext"; // Importar o contexto
+import MainContent from "./MainContent"; // Componente separado para o conteúdo principal
 import "./App.css"; // Importando o CSS
 
 function App() {
@@ -18,44 +20,43 @@ function App() {
       description: "O verdadeiro beijinho doce",
     },
     {
-      name: "Brigadeiro Tradicional",
+      name: "Cajuzinho",
       description: "Aquele brigadeiro com gostinho de casa de vó",
     },
     {
-      name: "Brigadeiro Tradicional",
+      name: "Bicho-de-Pe",
       description: "Aquele brigadeiro com gostinho de casa de vó",
     },
     {
-      name: "Brigadeiro Tradicional",
+      name: "Matcha",
       description: "Aquele brigadeiro com gostinho de casa de vó",
     },
     // Adicione mais produtos conforme necessário
   ];
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="/logo.png" alt="Logo da Empresa" className="App-logo" />
-      </header>
-      <div className="social-links">
-        <a
-          href="https://www.instagram.com/amado.docinho/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/instagram.svg" alt="Instagram" />
-        </a>
-        <a
-          href="https://wa.me/5519989494927"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/whatsapp.svg" alt="WhatsApp" />
-        </a>
-      </div>
-
-      <main>
-        {" "}
+    <PageProvider>
+      <div className="App">
+        <header className="App-header">
+          <img src="/logo.png" alt="Logo da Empresa" className="App-logo" />
+        </header>
+        <div className="social-links">
+          <a
+            href="https://www.instagram.com/amado.docinho/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/instagram.svg" alt="Instagram" />
+          </a>
+          <a
+            href="https://wa.me/5519989494927"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </div>
+        <MainContent />{" "}
         <section className="products-section">
           <h2 className="section-title">Conheça nossos produtos</h2>
           <div className="products-grid">
@@ -95,16 +96,15 @@ function App() {
             ))}
           </div>
         </section>
-      </main>
-
-      <footer className="App-footer">
-        <p>CNPJ: 00.000.000/0001-00</p>
-        <p>
-          Todos os direitos reservados. "Amado Docinho" é uma marca registrada
-          de [Nome da Empresa]
-        </p>
-      </footer>
-    </div>
+        <footer className="App-footer">
+          <p>CNPJ: 00.000.000/0001-00</p>
+          <p>
+            Todos os direitos reservados. "Amado Docinho" é uma marca registrada
+            de [Nome da Empresa]
+          </p>
+        </footer>
+      </div>
+    </PageProvider>
   );
 }
 

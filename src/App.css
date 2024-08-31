@@ -38,6 +38,31 @@ header {
   transition: transform 0.3s ease;
 }
 
+.botoes {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding-top: 5px;
+padding-inline: 10px;
+gap: 7.5px;
+
+}
+
+.styled-button {
+  background-color: #4CAF50; /* Cor de fundo */
+  border: none; /* Remover borda */
+  color: white; /* Cor do texto */
+  padding: 7px 25px; /* Espaçamento interno */
+  text-align: center; /* Alinhamento do texto */
+  text-decoration: none; /* Remover sublinhado */
+  display: inline-block; /* Exibição em linha */
+  font-size: 16px; /* Tamanho da fonte */
+  margin-bottom: 0px; /* Espaçamento entre os botões */
+  border-radius: 8px; /* Bordas arredondadas */
+  transition: background-color 0.3s; /* Transição suave */
+}
+
 
 .products-section {
   background-color: #fff4d7;
