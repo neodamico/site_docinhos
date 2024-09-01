@@ -43,7 +43,7 @@ function MainContent() {
       .join("\n");
     const total = calculateTotal();
     const message = `Pedido:\n${orderSummary}\n\nTOTAL DO PEDIDO: R$${total}\nEndereço de entrega ou retirada a combinar`;
-    const whatsappUrl = `https://wa.me/5519981035950?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/XXXXXXXXXXXXX?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");

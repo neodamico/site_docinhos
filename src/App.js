@@ -42,14 +42,14 @@ function App() {
         </header>
         <div className="social-links">
           <a
-            href="https://www.instagram.com/amado.docinho/"
+            href="https://www.instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src="/instagram.svg" alt="Instagram" />
           </a>
           <a
-            href="https://wa.me/5519981035950"
+            href="https://wa.me/XXXXXXXXXXXXX"
             target="_blank"
             rel="noopener noreferrer"
           >
