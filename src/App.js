@@ -21,15 +21,15 @@ function App() {
     },
     {
       name: "Cajuzinho",
-      description: "Aquele brigadeiro com gostinho de casa de vó",
+      description: "O mais gostoso da festa",
     },
     {
       name: "Bicho-de-Pe",
-      description: "Aquele brigadeiro com gostinho de casa de vó",
+      description: "O famoso brigadeiro rosa",
     },
     {
       name: "Matcha",
-      description: "Aquele brigadeiro com gostinho de casa de vó",
+      description: "Receita gourmet feito com chá 'Matcha' ",
     },
     // Adicione mais produtos conforme necessário
   ];
@@ -49,7 +49,7 @@ function App() {
             <img src="/instagram.svg" alt="Instagram" />
           </a>
           <a
-            href="https://wa.me/5519989494927"
+            href="https://wa.me/5519981035950"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -58,7 +58,7 @@ function App() {
         </div>
         <MainContent />{" "}
         <section className="products-section">
-          <h2 className="section-title">Conheça nossos produtos</h2>
+          <h2 className="section-title">Nossos Docinhos</h2>
           <div className="products-grid">
             {products.map((product, index) => (
               <div
@@ -99,8 +99,8 @@ function App() {
         <footer className="App-footer">
           <p>CNPJ: 00.000.000/0001-00</p>
           <p>
-            Todos os direitos reservados. "Amado Docinho" é uma marca registrada
-            de [Nome da Empresa]
+            Todos os direitos reservados. "Quero Docinhos" é uma marca
+            registrada de [Nome da Empresa]
           </p>
         </footer>
       </div>
