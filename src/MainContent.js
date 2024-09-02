@@ -1,19 +1,21 @@
 import React, { useContext, useState, useEffect } from "react";
 import { PageContext } from "./PageContext";
 
+const products = [
+  { name: "Brigadeiro Tradicional", price: 2.0 },
+  { name: "Brigadeiro Gourmet", price: 3.5 },
+  { name: "Beijinho", price: 2.0 },
+  { name: "Cajuzinho", price: 2.0 },
+  { name: "Bicho-de-pé", price: 3.5 },
+  { name: "Matcha", price: 4.0 },
+];
+
 function MainContent() {
   const { currentPage, setCurrentPage } = useContext(PageContext);
   const [order, setOrder] = useState([]);
-  const products = [
-    { name: "Brigadeiro Tradicional", price: 2.0 },
-    { name: "Brigadeiro Gourmet", price: 3.5 },
-    { name: "Beijinho", price: 2.0 },
-    { name: "Cajuzinho", price: 2.0 },
-    { name: "Bicho-de-pé", price: 3.5 },
-    { name: "Matcha", price: 4.0 },
-    // Adicione mais produtos conforme necessário
-  ];
 
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     // Inicializa o estado do pedido com os produtos e quantidade zero
     setOrder(products.map((product) => ({ ...product, quantity: 0 })));
@@ -33,7 +35,7 @@ function MainContent() {
 
   const sendOrder = () => {
     const orderSummary = order
-      .filter(item => item.quantity > 0) // Filtra itens com quantidade maior que 0
+      .filter(item => item.quantity > 0)
       .map(
         (item) =>
           `- ${item.name} - Quantidade ${item.quantity} - TOTAL R$${(
